@@ -1,0 +1,55 @@
+{
+  "name": "@liting-yes/template",
+  "type": "module",
+  "version": "0.1.0",
+  "private": false,
+  "description": "a basic template about front end",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "author": "liting-yes <luz.liting@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/dev-standard/template#readme",
+  "keywords": [
+    "template",
+    "frontend"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "commit": "git-cz",
+    "release": "release-it",
+    "build": "unbuild",
+    "format": "eslint --fix ."
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.34.0",
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@commitlint/cz-commitlint": "^17.3.0",
+    "@release-it/conventional-changelog": "^5.1.1",
+    "commitizen": "^4.2.6",
+    "eslint": "^8.30.0",
+    "husky": "^8.0.0",
+    "inquirer": "8",
+    "lint-staged": "^13.1.0",
+    "release-it": "^15.5.1",
+    "unbuild": "^1.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  }
+}
